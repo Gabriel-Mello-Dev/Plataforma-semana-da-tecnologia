@@ -46,34 +46,40 @@ const Play = () => {
   };
 
   return (
-    <div className={style.container}>
-      <h1 className={style.title}>{game.nome}</h1>
-      <p className={style.description}>{game.descricao}</p>
+   <div className={style.container}>
+  <a href="/jogos" className={style.backButton}>Voltar</a>
 
-      <iframe 
-        src={game.link} 
-        title={game.nome} 
-        className={style.iframe}
-      ></iframe>
+  <div className={style.gameColumn}>
+    <iframe 
+      src={game.link} 
+      title={game.nome} 
+      className={style.iframe}
+    ></iframe>
+  </div>
 
-      <div className={style.comentarios}>
-        <h3>Comentários</h3>
-        <ul>
-          {comentarios.map((c, i) => (
-            <li key={i}><strong>{c.nome}:</strong> {c.texto}</li>
-          ))}
-        </ul>
-        <input 
-          type="text" 
-          placeholder="Escreva um comentário..." 
-          value={comentario}
-          onChange={e => setComentario(e.target.value)}
-        />
-        <button onClick={enviarComentario}>Enviar</button>
-      </div>
+  <div className={style.sideColumn}>
+    <h1 className={style.title}>{game.nome}</h1>
+    <p className={style.description}>{game.descricao}</p>
 
-      <a href="/jogos" className={style.backButton}>Voltar</a>
+    <div className={style.comentarios}>
+      <h3>Comentários</h3>
+      <ul>
+        {comentarios.map((c, i) => (
+          <li key={i}><strong>{c.nome}:</strong> {c.texto}</li>
+        ))}
+      </ul>
+      <input 
+        type="text" 
+        placeholder="Escreva um comentário..." 
+        value={comentario}
+        onChange={e => setComentario(e.target.value)}
+        onKeyDown={e => { if(e.key === "Enter") enviarComentario(); }}
+      />
+      <button onClick={enviarComentario}>Enviar</button>
     </div>
+  </div>
+</div>
+
   );
 };
 

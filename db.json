@@ -2,23 +2,6 @@
   "jogos": [
     {
       "id": "1",
-      "nome": "Jogo da Memória",
-      "descricao": "Um clássico jogo de memória onde você deve encontrar pares de cartas iguais."
-    },
-    {
-      "id": "2",
-      "nome": "Quiz de Conhecimentos Gerais",
-      "descricao": "Teste seus conhecimentos com perguntas de diversas categorias.",
-      "link": "https://example.com/quiz"
-    },
-    {
-      "id": "0cbe",
-      "nome": "Jogo Runner",
-      "descricao": "Um jogo de sobrevivencia zumbi",
-      "link": "localhost/jogos"
-    },
-    {
-      "id": "81fd",
       "nome": "Run gunner",
       "descricao": "Jogo de tiro",
       "link": "http://localhost/jogos/",
@@ -26,11 +9,7 @@
       "likes": 1,
       "dislikes": 0,
       "comentarios": [
-        "a",
-        {
-          "nome": "Jogador",
-          "texto": "as"
-        },
+
         {
           "nome": "Jogador",
           "texto": "Muito Bom"
@@ -38,6 +17,10 @@
         {
           "nome": "joao",
           "texto": "Legal"
+        },
+        {
+          "nome": "joao",
+          "texto": "Muito Bom"
         }
       ],
       "votos": {

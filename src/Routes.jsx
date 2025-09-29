@@ -17,9 +17,9 @@ export default function AppRoutes() {
         <Route path="/" element={<UserLayout />}> 
       <Route path="/" element={<Home />} />
       <Route path="/jogos" element={<Jogos />} />
-      <Route path="/play" element={<Play />} />
       <Route path="/criarConta" element={<CriarConta />} />
 </Route>
+      <Route path="/play" element={<Play />} />
 
 
 {/* Desenvolvedor */}
