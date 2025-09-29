@@ -1,0 +1,6 @@
+export * from './home'
+export * from './jogos'
+export * from './play'
+export * from './desenvolvedor'
+export * from './erro'
+export * from './criarConta'
