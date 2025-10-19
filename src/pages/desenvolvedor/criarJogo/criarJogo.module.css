@@ -1,46 +1,47 @@
-/* 🎮 LoginDev.module.css */
+/* 🎮 CriarJogo.module.css */
 
 .container {
-  background: radial-gradient(circle at top left, #1a1a1a, #0d0d0d);
+  background: radial-gradient(circle at top left, #1a1a1a, #0e0e0e);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #f1f1f1;
+  color: #f5f5f5;
   padding: 20px;
 }
 
-/* 🧭 Caixa de login */
-.loginBox {
-  background: linear-gradient(145deg, #1e1e1e, #121212);
+/* 🧩 Caixa principal */
+.formBox {
+  background: linear-gradient(145deg, #1c1c1c, #111);
   border: 1px solid #2a2a2a;
-  border-radius: 14px;
-  padding: 40px 50px;
+  border-radius: 16px;
+  padding: 45px 50px;
   width: 100%;
-  max-width: 420px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  max-width: 500px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.loginBox:hover {
+.formBox:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(255, 87, 34, 0.3);
 }
 
-/* 🧡 Título */
-h2 {
+/* 🔸 Título */
+h1 {
   color: #ff7043;
   font-size: 2rem;
   margin-bottom: 30px;
   letter-spacing: 1px;
-  text-shadow: 0 2px 10px rgba(255, 112, 67, 0.2);
+  text-shadow: 0 2px 10px rgba(255, 112, 67, 0.3);
 }
 
-/* 📝 Campos de input */
-input {
+/* ✍️ Inputs */
+input[type="text"],
+input[type="file"] {
   width: 100%;
   padding: 12px 16px;
   margin-bottom: 18px;
@@ -58,24 +59,19 @@ input:focus {
   background-color: #222;
 }
 
-/* 👁 Botão mostrar senha */
-.eyeButton {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #ff7043;
-  font-size: 1.3rem;
-  margin-left: -35px;
-  transform: translateY(-4px);
-  transition: color 0.3s ease;
-}
-
-.eyeButton:hover {
-  color: #ff8a65;
+/* 🖼️ Preview da imagem */
+.preview {
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #ff7043;
+  box-shadow: 0 4px 14px rgba(255, 87, 34, 0.3);
 }
 
 /* 🔘 Botão principal */
-.loginButton {
+.submitButton {
   width: 100%;
   padding: 12px;
   margin-top: 10px;
@@ -85,33 +81,34 @@ input:focus {
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
+  text-transform: uppercase;
   letter-spacing: 0.5px;
   cursor: pointer;
   box-shadow: 0 4px 14px rgba(255, 87, 34, 0.3);
   transition: all 0.3s ease;
 }
 
-.loginButton:hover {
+.submitButton:hover {
   background: linear-gradient(90deg, #ff784e, #ff8f5c);
   transform: scale(1.04);
   box-shadow: 0 6px 18px rgba(255, 87, 34, 0.5);
 }
 
-/* 📱 Responsivo */
+/* 📱 Responsividade */
 @media (max-width: 500px) {
-  .loginBox {
+  .formBox {
     padding: 30px 25px;
   }
 
-  h2 {
-    font-size: 1.6rem;
+  h1 {
+    font-size: 1.7rem;
   }
 
   input {
     font-size: 0.95rem;
   }
 
-  .loginButton {
+  .submitButton {
     font-size: 0.95rem;
   }
 }

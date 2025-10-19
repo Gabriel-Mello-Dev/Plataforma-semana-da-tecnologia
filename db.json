@@ -9,7 +9,6 @@
       "likes": 1,
       "dislikes": 0,
       "comentarios": [
-
         {
           "nome": "Jogador",
           "texto": "Muito Bom"
@@ -26,6 +25,26 @@
       "votos": {
         "1": "like"
       }
+    },
+    {
+      "id": "9eeb",
+      "nome": "a",
+      "descricao": "a",
+      "link": "https://www.youtube.com/",
+      "imagem": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVQAAAAzCAYAAADIFPDjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMKSURBVHhe7dthcpswEIZhuUfxpXxGX8pXoT8SZegXrRDSIhb6PjOdCbASaxJ9hTh+pJSWBAAY9kd3AAD6EKgA4IRABQAnBCoAOHlc9U2p5fXUXT8e788/28vr+Wufh3UPR8w/W+2aqju8XsDb5QJVF31pYWtNMupGzDjHWUqvLbvLawSOcJlH/uX1/LXQrcX9eH/MY9hmXTtrP4AvlwhUDdLE4gYQUPhAHQnT1roeOrduA/j/hA/UUUcGXf7VwpHnAHAdoQN15O4UAGYL/S7/kYFamjvJ/NafRbWMLekZ1zLG6nNE6bwtc5fGpcaxqTK+pDanNU9tDDAqbKDOWBClczzen+L+VAmxzOot146OX2vts1dp7tq8Wp9rrf0lpVrdt1aaS+t7+gB6hX7kP8Py/SEArwVXCtPSdios+hrvPkdo3+uetD+tzXR/Hqfj877SfmsO/ToVagEPBOqB1ouWBWzbe2321gOzEKjCuqvRO5yzWb3N7rMn3HrGbOmZs2cMUEOgbrAeL1vUgs57MY/0CcAHgXowDbrl+yO0hB9wP2ED9W6Bk4M0BXptuSfvu+W99l6PvfXALGED1XL24u+x7jlKGOh11O3Z9LrkfrQvrQMiCR2od1g8Ggiw6fdb/yPS40A0oQM1FRZZ6gipvfVezjrvTKXvzxZrzLL621r9t6WlRvWMAWrCB2oyfvBbwyov0mha+z+KXhPdVlvHR519PQAPlwjUZCzo2iJcgr6bvtVXPj5DrYc1qy7T4+vxLXNpTS+de28fwKiwn+XfogtEbS2Y2njPsVo7enxNa3tZ5+iZv2cua4ylNldmzdkyFuh12UDFfVjhV0MwIqLLPPLjvnrCsSeEgaMRqAihJ1SBaHjkx+ny3WZrqO6tB2bhDhWXRJgiIgIVYbT8XrSlBjgLj/wIoyUsuTNFZAQqADjhkR8AnBCoAOCEQAUAJwQqADghUAHACYEKAE4IVABwQqACgBMCFQCcEKgA4IRABQAnBCoAOCFQAcAJgQoATghUAHBCoAKAEwIVAJz8BduOdIq9HFNQAAAAAElFTkSuQmCC"
+    },
+    {
+      "id": "cb88",
+      "nome": "Crystal Crown",
+      "descricao": "123",
+      "link": "http://localhost/Crystal/",
+      "imagem": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAMAAABlApw1AAAAJ1BMVEUAAAAjHzHclm7snXE8NkN7ZZThHlswSy0tKT7///+/G065m9NmUIBUFcf7AAAAAXRSTlMAQObYZgAAAXdJREFUeF7t1MtqxSAUhtGTnEuv7/+8BZ0IP4iptRPXN5IQ3HtNvP0uSZIkPaYDGA8AAOCt9FhQezNAGwAAQIxZCYh2BgAAAPTHfEQVkOerq2e7AQAAAPrDcrkVgGxTAAAAQI7pA6Lx1QEAAACqdQqQ53lAMgAAAACiq7AKSGQ/AAAAgPnyTgAAAIC/GnaU+ud5xi4AAACA6wOOplepnlcDAAAAAL6Gm2EAAAAA9Fe/N+WXlgEAAACw4hn9LN2j+n31MwoAAABw79YCZhgAAAAAuXrWLp0lAAAAAGCGcZbem45S++UsTUwBAAAAGCJVwKtUz+GdAgAAAAD0GfmMjt+/DQAAAGDJY3p0W/CAbgEAAABIRmCuA3J1AAAAgImO4XJ1AAAAgGBMdZbyPP+A7gwAAAB4leI8BMh7KiDvBAAAAEjG90CVNP9PLVffAQAAAJC1gOfFKul5sQqI1TcCAAAAZAFYWAXcIgAAAID/aRsAAACAJEmSfgBEovcUOS41UAAAAABJRU5ErkJggg==",
+      "comentarios": [
+        {
+          "nome": "Daneil",
+          "texto": "achei legal"
+        }
+      ]
     }
   ],
   "desenvolvedores": [
@@ -45,6 +64,30 @@
       "nome": "joao",
       "email": "joao@a",
       "senha": "123"
+    },
+    {
+      "id": "e589",
+      "nome": "A",
+      "email": "teste@a",
+      "senha": "123"
+    },
+    {
+      "id": "e128",
+      "nome": "teste",
+      "email": "teste@teste",
+      "senha": "123"
+    },
+    {
+      "id": "1632",
+      "nome": "teste",
+      "email": "teste@a",
+      "senha": "123"
+    },
+    {
+      "id": "deb4",
+      "nome": "Daniel",
+      "email": "daniel@ruim",
+      "senha": "123"
     }
   ],
   "usuarios": [
@@ -52,6 +95,12 @@
       "id": "1",
       "nome": "joao",
       "email": "joao@a",
+      "senha": "123"
+    },
+    {
+      "id": "0a6a",
+      "nome": "Daneil",
+      "email": "Daniel@teste",
       "senha": "123"
     }
   ]

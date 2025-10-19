@@ -65,6 +65,8 @@ const Home = () => {
           {mostrarSenha ? "🙈" : "👁"}
         </button>
       </div>
+      <br />
+      <a href="criarConta">Ainda não possui conta?</a>
 
       <button onClick={handleLogin} className={style.loginButton}>Entrar</button>
     </div>

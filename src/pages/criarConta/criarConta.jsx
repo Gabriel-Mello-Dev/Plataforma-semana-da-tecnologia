@@ -16,7 +16,7 @@ const navigate = useNavigate();
       return;
     }
 
-    axios.post("http://localhost:3000/desenvolvedores", {
+    axios.post("http://localhost:3000/usuarios", {
       nome,
       email,
       senha

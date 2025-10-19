@@ -1,24 +1,21 @@
+import styles from "./LoginDev.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const LoginDev = () => {
-
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [mostrarSenha, setMostrarSenha] = useState(false);
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
-  // Apenas para testar se o JSON Server está funcionando
   useEffect(() => {
     axios.get("http://localhost:3000/desenvolvedores")
       .then(response => console.log(response.data))
       .catch(err => console.error(err));
   }, []);
 
-  const toggleMostrarSenha = () => {
-    setMostrarSenha(!mostrarSenha);
-  };
+  const toggleMostrarSenha = () => setMostrarSenha(!mostrarSenha);
 
   const handleLogin = () => {
     axios.get("http://localhost:3000/desenvolvedores")
@@ -26,8 +23,8 @@ const LoginDev = () => {
         const dev = res.data.find(d => d.email === email && d.senha === senha);
         if (dev) {
           alert("Login realizado com sucesso!");
-navigate("/CriarJogo");
-
+          localStorage.setItem("devLogado", "true"); // ✅ marca como logado
+          navigate("/CriarJogo");
         } else {
           alert("Email ou senha incorretos.");
         }
@@ -36,25 +33,40 @@ navigate("/CriarJogo");
   };
 
   return (
-    <div>
-      <h2>Login Desenvolvedor</h2>
+    <div className={styles.container}>
+      <div className={styles.loginBox}>
+        <h2>Login Desenvolvedor</h2>
 
-      <input
-        type="email"
-        placeholder="Insira seu Email"
-        value={email}
-        onChange={e => setEmail(e.target.value)}
-      />
+        <input
+          type="email"
+          placeholder="Insira seu Email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+        />
 
-      <input
-        type={mostrarSenha ? "text" : "password"}
-        placeholder="Insira sua Senha"
-        value={senha}
-        onChange={e => setSenha(e.target.value)}
-      />
+        <div style={{ position: "relative" }}>
+          <input
+            type={mostrarSenha ? "text" : "password"}
+            placeholder="Insira sua Senha"
+            value={senha}
+            onChange={e => setSenha(e.target.value)}
+          />
+          <button
+            type="button"
+            className={styles.eyeButton}
+            onClick={toggleMostrarSenha}
+          >
+            👁
+          </button>
+        </div>
 
-      <button onClick={toggleMostrarSenha}>👁</button>
-      <button onClick={handleLogin}>Login</button>
+        <button
+          className={styles.loginButton}
+          onClick={handleLogin}
+        >
+          Login
+        </button>
+      </div>
     </div>
   );
 };

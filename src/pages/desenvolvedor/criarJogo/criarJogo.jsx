@@ -1,13 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
+import styles from "./CriarJogo.module.css";
+import { useNavigate } from "react-router-dom";
 
 const CriarJogo = () => {
   const [nome, setNome] = useState("");
   const [descricao, setDescricao] = useState("");
   const [link, setLink] = useState("");
-  const [imagem, setImagem] = useState(""); // Base64
+  const [imagem, setImagem] = useState("");
+  const navigate = useNavigate();
 
-  // Converte imagem para Base64
+  // 🚨 Proteção de rota
+  useEffect(() => {
+    const logado = localStorage.getItem("devLogado");
+    if (logado !== "true") {
+      alert("Acesso negado! Faça login como desenvolvedor primeiro.");
+      navigate("/");
+    }
+  }, [navigate]);
+
   const handleImage = (e) => {
     const file = e.target.files[0];
     const reader = new FileReader();
@@ -25,54 +36,65 @@ const CriarJogo = () => {
       nome,
       descricao,
       link,
-      imagem
+      imagem,
     })
-    .then(() => {
-      alert("Jogo registrado com sucesso!");
-      setNome("");
-      setDescricao("");
-      setLink("");
-      setImagem("");
-    })
-    .catch(err => console.error(err));
+      .then(() => {
+        alert("Jogo registrado com sucesso!");
+        setNome("");
+        setDescricao("");
+        setLink("");
+        setImagem("");
+      })
+      .catch(err => console.error(err));
   };
 
   return (
-    <div>
-      <h1>Criar Jogo</h1>
+    <div className={styles.container}>
+      <div className={styles.formBox}>
+        <h1>Criar Jogo</h1>
 
-      <input 
-        type="text" 
-        placeholder="Nome do jogo" 
-        value={nome} 
-        onChange={e => setNome(e.target.value)} 
-      />
+        <input
+          type="text"
+          placeholder="Nome do jogo"
+          value={nome}
+          onChange={e => setNome(e.target.value)}
+        />
 
-      <input 
-        type="text" 
-        placeholder="Descrição do jogo" 
-        value={descricao} 
-        onChange={e => setDescricao(e.target.value)} 
-      />
+        <input
+          type="text"
+          placeholder="Descrição do jogo"
+          value={descricao}
+          onChange={e => setDescricao(e.target.value)}
+        />
 
-      <input 
-        type="text" 
-        placeholder="Link do jogo" 
-        value={link} 
-        onChange={e => setLink(e.target.value)} 
-      />
+        <input
+          type="text"
+          placeholder="Link do jogo"
+          value={link}
+          onChange={e => setLink(e.target.value)}
+        />
 
-      <input 
-        type="file" 
-        accept="image/*" 
-        onChange={handleImage} 
-      />
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handleImage}
+        />
 
-      {imagem && (
-        <img src={imagem} alt="Preview" width="150" style={{ marginTop: "10px" }} />
-      )}
+        {imagem && (
+          <img
+            src={imagem}
+            alt="Preview"
+            className={styles.preview}
+          />
+        )}
 
-      <button onClick={handleSubmit}>Registrar Jogo</button>
+        <button
+          className={styles.submitButton}
+          onClick={handleSubmit}
+        >
+          Registrar Jogo
+        </button>
+      </div>
     </div>
   );
 };

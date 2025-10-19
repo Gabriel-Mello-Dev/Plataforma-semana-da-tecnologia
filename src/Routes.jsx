@@ -1,6 +1,6 @@
 // src/routes.jsx
 import { Routes, Route } from "react-router-dom";
-import {Home, Jogos, LoginDev, Play, CriarJogo, Error, CriarConta} from "./pages";
+import {Home, Jogos, LoginDev, Play, CriarJogo, Error, CriarConta, CriarDev} from "./pages";
 import { UserLayout } from "./layout";
 
 export default function AppRoutes() {
@@ -25,6 +25,7 @@ export default function AppRoutes() {
 {/* Desenvolvedor */}
       <Route path="/Dev" element={<LoginDev />} />
       <Route path="/CriarJogo" element={<CriarJogo />} />
+      <Route path="/CriarDev" element={<CriarDev />} />
 
     </Routes>
   );
