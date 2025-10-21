@@ -65,6 +65,12 @@ input:focus {
   background-color: #e64a19;
 }
 
+.abobora img{
+width: "10px";
+ height: "10px";
+
+}
+
 .loginButton {
   padding: 10px 15px;
   border: none;

@@ -69,6 +69,9 @@ const Home = () => {
       <a href="criarConta">Ainda não possui conta?</a>
 
       <button onClick={handleLogin} className={style.loginButton}>Entrar</button>
+
+
+      <img src="https://cdn.pixabay.com/photo/2012/04/01/16/39/halloween-23439_1280.png" alt="" style={{width: "10vw", height: "10vw", alignSelf: "center"}} />
     </div>
   );
 }
